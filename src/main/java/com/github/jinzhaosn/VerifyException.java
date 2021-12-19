@@ -1,4 +1,4 @@
-/**
+/*
  *    Copyright 2021-2022 jinzhaosn
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,15 +13,29 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  */
-package com.github.jinzhaosn.function;
+
+package com.github.jinzhaosn;
 
 /**
- * 无参推测Function
+ * 验证异常
  *
  * @auther 961374431@qq.com
- * @date 2021年12月11日
+ * @date 2021年12月20
  */
-@FunctionalInterface
-public interface VoidPredicate {
-    boolean test();
+public class VerifyException extends RuntimeException{
+    public VerifyException() {
+        super();
+    }
+
+    public VerifyException(String message) {
+        super(message);
+    }
+
+    public VerifyException(String message, Throwable cause) {
+        super(message, cause);
+    }
+
+    public VerifyException(Throwable cause) {
+        super(cause);
+    }
 }
