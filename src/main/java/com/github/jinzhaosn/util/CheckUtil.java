@@ -19,7 +19,6 @@ package com.github.jinzhaosn.util;
 import com.github.jinzhaosn.VerifyException;
 import com.github.jinzhaosn.function.VoidPredicate;
 
-import java.util.Objects;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
 
