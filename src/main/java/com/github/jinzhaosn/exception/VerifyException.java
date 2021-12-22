@@ -14,7 +14,7 @@
  *    limitations under the License.
  */
 
-package com.github.jinzhaosn;
+package com.github.jinzhaosn.exception;
 
 /**
  * 验证异常
