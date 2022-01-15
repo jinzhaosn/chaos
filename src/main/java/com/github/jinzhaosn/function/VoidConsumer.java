@@ -23,5 +23,5 @@ package com.github.jinzhaosn.function;
  */
 @FunctionalInterface
 public interface VoidConsumer {
-    void accept();
+    void accept() throws Exception;
 }

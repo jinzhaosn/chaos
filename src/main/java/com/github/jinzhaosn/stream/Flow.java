@@ -71,7 +71,11 @@ public class Flow {
 
         public FollowFlow then(VoidConsumer consumer) {
             if (predicate.test()) {
-                consumer.accept();
+                try {
+                    consumer.accept();
+                } catch (Exception exp) {
+                    throw (RuntimeException) exp;
+                }
                 return new FollowFlowImpl(Optional.empty());
             }
             return new FollowFlowImpl();
@@ -146,7 +150,11 @@ public class Flow {
             if (finishedCondition != null) {
                 return new FlowResultImpl(result);
             }
-            consumer.accept();
+            try {
+                consumer.accept();
+            } catch (Exception exp) {
+                throw (RuntimeException) exp;
+            }
             return new FlowResultImpl(Optional.empty());
         }
 
